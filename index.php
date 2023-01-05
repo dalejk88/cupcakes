@@ -1,3 +1,7 @@
+<!--Dale Kanikkeberg, Dee Brecke
+1/5/23
+https://dkanikkeberg.greenriverdev.com/328/cupcakes/
+Form where the user can order cupcakes-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +12,7 @@
     <title>Cupcakes</title>
 </head>
 <body>
+<!--Create checkbox form-->
     <form method="post" action="process.php">
     <h1>Cupcake Fundraiser</h1>
         <label>Your name:<br><input type="text" name="name"></label>

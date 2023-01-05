@@ -1,3 +1,7 @@
+<!--Dale Kanikkeberg, Dee Brecke
+1/5/23
+https://dkanikkeberg.greenriverdev.com/328/cupcakes/
+Totals the order of cupcakes and summarizes-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,9 +13,11 @@
 </head>
 <body>
 <?php
+// Check that the form was completely filled out
     if(!empty($_POST['name']) && !empty($_POST['flavor'])){
         echo 'Thank you, '.$_POST['name'].', for your order!<br><br>';
 
+        // Display each cupcake picked
         echo 'Order Summary:';
         if (isset($_POST['flavor'])) {
             echo '<ul>';
@@ -21,6 +27,7 @@
             echo '</ul><br>';
         }
 
+        // Compute the total at $3.50 a cupcake
         echo 'Order Total: $';
         echo ((double)sizeof($_POST['flavor']) * 3.50);
     }else{
