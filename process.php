@@ -9,19 +9,23 @@
 </head>
 <body>
 <?php
-    echo 'Thank you, '.$_POST['name'].', for your order!<br><br>';
+    if(!empty($_POST['name']) && !empty($_POST['flavor'])){
+        echo 'Thank you, '.$_POST['name'].', for your order!<br><br>';
 
-    echo 'Order Summary:';
-    if (isset($_POST['flavor'])) {
-        echo '<ul>';
-        foreach ($_POST['flavor'] as $item) {
-            echo '<li>' . $item . '</li>';
+        echo 'Order Summary:';
+        if (isset($_POST['flavor'])) {
+            echo '<ul>';
+            foreach ($_POST['flavor'] as $item) {
+                echo '<li>' . $item . '</li>';
+            }
+            echo '</ul><br>';
         }
-        echo '</ul><br>';
-    }
 
-    echo 'Order Total: $';
-    echo ((double)sizeof($_POST['flavor']) * 3.50);
+        echo 'Order Total: $';
+        echo ((double)sizeof($_POST['flavor']) * 3.50);
+    }else{
+        echo 'Please go back and fill in the form';
+    }
 ?>
 </body>
 </html>
