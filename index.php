@@ -8,9 +8,9 @@
     <title>Cupcakes</title>
 </head>
 <body>
-    <form>
+    <form method="post" action="process.php">
     <h1>Cupcake Fundraiser</h1>
-        <label>Your name:<br><input type="text"></label>
+        <label>Your name:<br><input type="text" name="name"></label>
         <p>Cupcake flavors:</p>
         <label><input type="checkbox" value="grasshopper" name="flavor[]">The Grasshopper</label><br>
         <label><input type="checkbox" value="whiskey" name="flavor[]">Whiskey Maple Bacon</label><br>
